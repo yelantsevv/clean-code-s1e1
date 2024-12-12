@@ -23,18 +23,18 @@ addBtn.addEventListener("click", () => {
 
 todo.addEventListener("click", (event) => {
   const parentElement = event.target.parentElement;
-
-  if (event.target.classList.contains("todo__edit_btn")) {
+ const contains = (className) => event.target.classList.contains(className)
+  if (contains("todo__edit_btn")) {
     editTask(parentElement);
   }
 
-  if (event.target.classList.contains("todo__delete_img")) {
-    const li = parentElement.parentNode;
+  if (contains("todo__delete_img") || contains("todo__delete_btn")) {
+    const li = contains("todo__delete_img") ? parentElement.parentNode : parentElement;
     const ul = li.parentNode;
     ul.removeChild(li);
   }
 
-  if (event.target.classList.contains("todo__checkbox")) {
+  if (contains("todo__checkbox")) {
     if (event.target.checked) {
       todoCompleted.appendChild(parentElement);
     } else {
