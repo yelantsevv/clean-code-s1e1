@@ -1,5 +1,5 @@
 const addInput = document.querySelector(".add__task_input");
-const addBtn = document.querySelector(".add__task_button");
+const addBtn = document.querySelector(".add__task_btn");
 const todo = document.querySelector(".todo");
 const todoInCompleted = document.querySelector(".todo__incompleted");
 const todoCompleted = document.querySelector(".todo__completed");
@@ -13,7 +13,7 @@ addBtn.addEventListener("click", () => {
   <label class="task todo__label">${addInput.value}</label>
   <input type="text" class="task todo__input">
   <button class="todo__edit_btn">Edit</button>
-  <button class="todo__delete">
+  <button class="todo__delete_btn">
     <img class="todo__delete_img" src="./remove.svg" alt="Remove">
   </button>`;
 

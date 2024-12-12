@@ -47,8 +47,10 @@ body {
   width: 500px;
   margin: 0 auto 0;
 }
-
-.task {
+.add__task_input,
+.todo__label,
+.todo__input{
+/* .task { */
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -58,9 +60,9 @@ body {
   display: flex;
 }
 
-.add__task_button,
+.add__task_btn,
 .todo__edit_btn,
-.todo__delete {
+.todo__delete_btn {
   background: none;
   border: 0px;
   color: #888;
@@ -70,9 +72,9 @@ body {
   cursor: pointer;
 }
 
-.add__task_button:hover,
+.add__task_btn:hover,
 .todo__edit_btn:hover,
-.todo__delete:hover {
+.todo__delete_btn:hover {
   color: #3a3a3a;
 }
 
